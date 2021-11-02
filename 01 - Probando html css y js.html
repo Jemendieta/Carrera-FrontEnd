@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probando HTMl, CSS y JavaScript</title>
+    <style>
+      /* Estilos Css para mi ejemplo de tarea. */
+      body {
+        background-color: #747477;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="tarea" placeholder="Ingresa tarea" />
+    <input type="submit" id="boton" value="Agrega Tarea" />
+    <h1>Mi lista de tareas | EJemplo 01</h1>
+    <hr />
+    <ul>
+      <li>Estudiar una clase al día.</li>
+    </ul>
+    <script>
+      // estructura JS para mi ejemplo de tarea
+      // seleccionamos los elementos del html
+      let $tarea = document.getElementById("tarea");
+      let $boton = document.getElementById("boton");
+      let $tareas = document.querySelector("ul");
+
+      // cuando hagamos click en el boton
+      $boton.addEventListener("click", function () {
+        // obtener lo que se ha escrito en el input
+        let $listaTarea = tarea.value;
+        // añadimos como elemento li
+        let $li = document.createElement("li");
+        $li.textContent = $listaTarea;
+        $tareas.appendChild($li);
+      });
+    </script>
+  </body>
+</html>
