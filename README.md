@@ -43,7 +43,101 @@
 
 - **Fundamentos.**
 
-  - Primeros pasos.
+  - <b>Primeros pasos.</b>
+
+    - Hojas de estilo en cascada, permite dar estilo<br>a todos nuestros elementos HTML.
+    - La definición de los estilos tienen la siguiente <b>regla</b>:<br><b>Selector => propiedad => valor.</b><br>Como se muestra en el siguiente ejemplo:<br> donde main es el <b>selector</b>, color la <b>propiedad</b> y blue el <b>valor</b>.
+
+      ```CSS
+      main {
+        color:blue;
+        }
+      ```
+
+    - Formas de añadir estilos:<br>
+
+      - <b>En linea:</b> haciendo uso del atributo style dentro de la etiqueta html a la cual queremos dar ciertos estilos css, NO es algo recomendable hacer, aunque es la <b>forma más específica</b> de aplicar estilos css.
+
+      ```HTML
+       <p style="color:blue">soy un párrafo con estilo inline</p>
+      ```
+
+      - <b>Internos:</b> hacemos uso de la etiqueta style dentro del head de nuestro archivo html.
+
+      ```HTML
+      <DOCTYPE html>
+      <html lang="en">
+        <head>
+          <style type="text/css">
+            h1{
+              color: cyan;
+              font-size: 16px;
+            }
+          </style>
+        </head>
+        <body>
+          <h1>
+            hola, soy un h1 con estilos internos
+          </h1>
+        </body>
+      </html>
+      ```
+
+      - <b>Externos:</b> es la forma recomendad de aplicar estilos css, se pueden aplicar a un conjunto de documentos HTML y se importan a travez de la etiqueta link.
+
+      ```HTML
+       <link rel="stylesheet" href="css/misEstilos.css" />
+      ```
+
+    - <b>Selectores:</b> son las distintas formas en las que podemos aplicar estilos css a ciertos elementos html.<br>
+
+      - Selectores de Tipo: nos permiten usar las propias etiquetas del documento html como selector.
+
+      ```CSS
+        p {
+          color: red;
+          font-weight:bold;
+        }
+        header {
+          background-color:gray;
+        }
+      ```
+
+      - Selectores de clase: estan echos para reutilizarse, permiten seleccionar elementos específicos, se asocia al elemento html con el atributo class, y en css, se identifica por medio de un punto antes del selector(nonbre de la clase).<br>Este tipo de selector es el más recomendado para trabajar con estilos css.
+
+      ```CSS
+        .clase {
+          border:2px solid green;
+          font-weight:bold;
+        }
+      ```
+
+      - Selectores de id: estan echos para ser utilizadosa elementos más específicos (mayor especificidad que las clases), se asocian al elementos html con el atributo id, y en css se identica por medio del símbolo <b>#</b>.<br>Este tipo de selector solo puede ser usado una vez, por lo que no se recomienda para trabajar los estilos css, salvo se considere necesario, pues por lo general, son usados para trabajar con JavaScript.<br>
+
+      ```CSS
+       #identificador {
+         border:2px solid orange;
+         padding:10px;
+       }
+      ```
+
+      - Selectores descendientes: son aquellos selectores que por ejemplo, se encuentran contenidos dentro de otros elementos, es decir en base a su relación. Pueden estar conformados por tipo, clases id, o por una combinación de todos ellos. al agruparse, su nivel de especifidad aumenta en relación a otros. Si bine podemos hacer uso de ellos, no es recomendable agrupar demasiados selectores para una misma declaración.<br>
+
+      ```CSS
+        header nav{
+          color:cyan;
+        }
+        ul li a{
+          text-decoration:none;
+        }
+        .contenedor p span{
+          text-decoration:none;
+        }
+        footer nav.legal a{
+          color:light-blue;
+        }
+      ```
+
   - Flexbox.
   - Grid.
 

@@ -1,0 +1,27 @@
+/* Estilos usados para practicar los temas de las clases desarrolladas */
+/* 1 - Dar estilos a la práctica-1 */
+p {
+  color: gray;
+}
+h1 {
+  color: gray;
+}
+h2 {
+  color: lightgray;
+}
+
+li {
+  font-size: 18px;
+}
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-weight: bold;
+}
+
+main {
+  background-color: lightyellow;
+  padding: 20px;
+}
+/* Fin de los estilos de la práctica uno con estilos css */
