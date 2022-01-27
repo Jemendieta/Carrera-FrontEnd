@@ -138,6 +138,77 @@
         }
       ```
 
+      - Pseudo Clases: seleccionar en base a condiciones especiales.
+        ¿Cómo seleccionamos un estado, posición o relación?
+
+        - Cuando ponemos el puntero del raton sobre un enlace, o cuando un elemento es el segundo de su tipo.
+
+        - De Estado: escenario especial en base al estado.
+
+        ```CSS
+          a:hover{
+            text-decoration: undeline;
+          }
+        ```
+
+        Esas👆👆 líneas de código funcionarán cuando se pose el puntero del mouse sobre el elemento a.
+
+        - De Posición: buscamos un estado especial en base a la posición.
+
+        ```CSS
+        article p:first-child{
+          font-size:1.5em;
+        }
+        ```
+
+        Con esas👆👆 líneas de código indicamos un tamaño de fuente al primer elemento de tipo párrafo.
+
+        Existen muchas pseudo - clases, podemo revisar más de ellas en el siguiente enlace.
+        [Pseudo-Clases(https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes)]
+
+        - De Relación: buscamos un estado especial en base a una relación.
+
+        ```CSS
+          a:not(.destacado){
+            color:gray;
+          }
+        ```
+
+        Con esas👆👆 líneas de código seleccionamos elementos a que no tegan la clase destacado.
+
+      - Pseudo - Elementos: otorgan mayor control y precisión a la hora de crear estilos css.
+        Se utilizan para definir partes específicas de un elemento.
+
+      las Pseudo-Clases hacen uso de dos (::) pares puntos a diferencia de los Pseudo-Elementos que solo hacen uso de un (:) solo juego de dos puntos.
+
+      - Pseudo elementos tipográficos.
+
+      ```CSS
+        h1::first-letter{
+          color:red;
+        }
+        p::first-child{
+          font-weight:bold;
+        }
+      ```
+
+      Esas👆👆 líneas de código seleccionan la primera letra de los h1 y el primer elemento p respectivamente.
+
+      - Pseudo elementos de contenido: añaden algo antes y/o despues del contenido original al que está asociado.
+
+      ```CSS
+        li::before{
+          content:"🚧";
+        }
+        h1::after{
+          content:"🙋‍♂️";
+        }
+      ```
+
+      Esas👆👆 líneas de código, agregan un icono antes del elemento li y despues del elemento h1 respectivamente.
+
+      En el siguiente enlace podremos aprender más Pseudo elementos [Pseudo-Elementos(https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)]
+
   - Flexbox.
   - Grid.
 
