@@ -164,7 +164,7 @@
         Con esas👆👆 líneas de código indicamos un tamaño de fuente al primer elemento de tipo párrafo.
 
         Existen muchas pseudo - clases, podemo revisar más de ellas en el siguiente enlace.
-        [Pseudo-Clases(https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes)]
+        [Pseudo-Clases](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes)
 
         - De Relación: buscamos un estado especial en base a una relación.
 
@@ -207,7 +207,7 @@
 
       Esas👆👆 líneas de código, agregan un icono antes del elemento li y despues del elemento h1 respectivamente.
 
-      En el siguiente enlace podremos aprender más Pseudo elementos [Pseudo-Elementos(https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)]
+      En el siguiente enlace podremos aprender más Pseudo elementos [Pseudo-Elementos](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)
 
   - Flexbox.
   - Grid.
