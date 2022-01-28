@@ -1,0 +1,55 @@
+body {
+  background-color: lightgray;
+}
+/* main */
+main {
+  font-family: sans-serif;
+  width: 650px;
+  margin: 0 auto;
+}
+/* contenido */
+.main-container h1,
+.main-container p,
+.main-container p {
+  font-size: 40px;
+}
+/* iconos */
+.icons p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.icons img {
+  width: 76px;
+  margin-right: 94px;
+}
+
+.icons img:last-child {
+  margin-right: 0;
+}
+
+/* resto */
+.rest {
+  margin-top: 30px;
+}
+.rest a {
+  font-family: monospace;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  background-color: orange;
+  border: 2px solid darkgoldenrod;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.rest img {
+  width: 100%;
+}
+.rest p {
+  text-align: center;
+  font-weight: bold;
+}

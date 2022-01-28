@@ -183,7 +183,7 @@
 
         Con esas👆👆 líneas de código seleccionamos elementos a que no tegan la clase destacado.
 
-      - Pseudo - Elementos: otorgan mayor control y precisión a la hora de crear estilos css.
+      - Pseudo Elementos: otorgan mayor control y precisión a la hora de crear estilos css.
         Se utilizan para definir partes específicas de un elemento.
 
       las Pseudo-Clases hacen uso de dos (::) pares puntos a diferencia de los Pseudo-Elementos que solo hacen uso de un (:) solo juego de dos puntos.
