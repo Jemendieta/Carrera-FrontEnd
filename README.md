@@ -10,7 +10,12 @@
 
 ## Temas Estudiados.
 
+1. [HTML](#html)
+2. [CSS](#css)
+
 ---
+
+<div id="html"/>
 
 **1. Introducción al desarrollo web.**
 
@@ -38,6 +43,8 @@
     - <b>div</b>: agrupa contenido sin contenido semántico relacionado.
 
   <br>
+
+<div id="css"/>
 
 **2. CSS a Fondo.**
 
