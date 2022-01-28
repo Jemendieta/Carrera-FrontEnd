@@ -216,6 +216,44 @@
 
       En el siguiente enlace podremos aprender más Pseudo elementos [Pseudo-Elementos](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)
 
+      - Píxeles en CSS: en css tenemos dos clases de unidades de medida, absolutas y relativas, para el caso de los píxeles, encajan dentro de las absolutas.
+
+      ```CSS
+        p{
+          font-size:32px;
+        }
+      ```
+
+      Nos dan una precisión total,pues sin importar el dispositivo en el que se visualice, siempre mantendrá su valor.
+
+      - Porcentajes en CSS: son unidades relativas, cuando se asigna como data type a un elemento, este se calcula con base en la medida del elemento ancestro.
+
+      Para que funciones correctamente, la medida en el elemento padre debe estar especificada.
+
+      ```CSS
+        html, body{
+          height:100%;
+        }
+        header{
+          background-color:tomato;
+          height:100%;
+        }
+      ```
+
+      Representamos👆👆 un par de elementos padre y su relación de altura en porcentaje con el elemento hijo header, header ocupará el 100% de alto partiendo de la relación de tamaño con html y body.
+
+      Los porcentajes se pueden utilizar en propiedades como width, height, margin y padding. además se pueden usar junto a unidades absolutas👇👇.
+
+      ```CSS
+        header{
+          width:100%;
+          min-width:1280px;
+          max-width:1920px;
+        }
+      ```
+
+      - Em vs Rem:
+
   - Flexbox.
   - Grid.
 
