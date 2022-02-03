@@ -252,7 +252,108 @@
         }
       ```
 
-      - Em vs Rem:
+      - Em vs Rem: son unidades relativas de css para trabajar con tipografías, aunque se peuden utilizar en otros elementos.
+
+      Ambas unidades computan (se convierten) en valores absolutos de pixel, basados en el valor font-size.
+
+      - em: se calcula multiplicando en base al valor de font-size del elemento al que estamos accediendo. como el valor font-size es heredable, la unidad em presenta el efecto compuesto, es decir que si hubieran elementos hijos estos heredarían el valor del font-size y lo aumentarían.
+
+      ```HTML
+      <ul>
+        <li>
+          primer nivel
+        </li>
+        <ul>
+          <li>
+            segundo nivel
+          </li>
+        </ul>
+      </ul>
+      ```
+
+      ```CSS
+        html{
+          font-size:16px;
+          <!-- el valor base es 16px -->
+        }
+        li {
+          font-size:2em;
+          <!-- primer li valdría 32. -->
+          <!-- segundo li valdría 64px -->
+        }
+      ```
+
+      para el caso del ejemplo👆👆, el 2em hace referencia al valor(16px) del font-size heredado del padre html, si multiplicacmos sería 2 x el valor del font-size, entonces el primer elemento li valdría 32px y el segundo valdría 64px pues parte de la base del valor del primer li.
+
+      Si agregásemos un tercer li como hijo del segundo, este partiría de la base de los 64px, los multiplicaría por los 2em de la declaracíon css, y por tanto valdría 128px.
+
+      - rem: se calcula multiplicando en bas el valor del font-size del elemento root(HTML) del codumento, por defecto es 16 px. aunque este valor puede ser influenciado por la configuración tipográfico del nacegador que se use.
+
+      ```CSS
+        li{
+          font-size:2rem;
+        }
+      ```
+
+      Para este👆👆ejemplo, el valor sería de 32px, pues parte de la base de los 16px del elemento root, por lo que sería 16x2.
+
+      ¿Cuando usar em o rem?
+
+      - ante la duda es mejor usar rem, ya que no tiene efecto compuesto.
+      - usa unidades em para escalar tamaños en elementos que dependan del valor de font-size por herencia.
+      - usa rem en elementos cuyo tamaño esté en base al elemento root(HTML).
+
+      - Color en CSS: podemos expresarlo en diferenetes formas, como por sus nombres o keyword (yellow, red, etc). Además de eso, disponemos de las funciones RGB, RGBA, HSLA y la notación hexadecimal para crear colores.
+
+      ```CSS
+      div{
+        background-color:cyan;
+      }
+      ```
+
+      Palabras clave como👆👆👆 golden para identificar colores.
+
+      ```CSS
+      h1{
+        color:rgb(255,255,255);
+      }
+      ```
+
+      En este👆👆 caso, tenemos la función rgb(rojo, verde y azul) la cual acepta valores que van desde 0 hasta 255 en cada canal.
+
+      ```CSS
+      div{
+        background-color:rgba(185,255,180,.5);
+      }
+      ```
+
+      Para el👆👆👆 caso de rgba, funciona de forma similar a rgb, pero añade un canal extra de trasparencia(alpha), en el ejemplo, colocamos un .5 o 50% de transparencia.
+
+      ```CSS
+      div{
+        background-color:hsla(45,180%,50%,.5);
+      }
+      ```
+
+      En el caso de hsla👆👆👆,matiz, saturación, iluminación y trnasparencia(hue, saturarion, lightness, alpha).
+      Hue es un ángulo de 0 a 360 grados, cubre todo el espectro de color.
+      Saturation y lightness representan un valor entre 0 y 100 por ciento para la desaturación/saturación y oscuro/claro respectivamente.
+
+      - Color Hexadecimal: es una de las formas más comunes de expresar colores en css, un color hexadecimal está compuesto por tres pares de símbolos hexadecimales(base 16).
+      - el siguiente👇👇 es un ejemplo de la estructura.
+
+      ```CSS
+        div{
+          background-color:#14c7eb;
+        }
+      ```
+
+      para saber el verdadero valor para cada color se multiplica el primer símbolo por 16 y el segundo por 1, ambos resultados se suman obteniendo l valor para ese color, por ejemplo:
+
+      - 14 = 1x16 + 4x1 = 20 para el color rojo de un rango de 0 a 255.
+      - también se peude expresar transparencia en hexadecimel, agregando otro par de símbolos.
+
+      - Especificidad:
 
   - Flexbox.
   - Grid.
