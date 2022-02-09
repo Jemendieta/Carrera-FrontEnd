@@ -44,6 +44,8 @@
 
   <br>
 
+---
+
 <div id="css"/>
 
 **2. CSS a Fondo.**
@@ -61,7 +63,7 @@
         }
       ```
 
-    - Formas de añadir estilos:<br>
+    - **Formas de añadir estilos**:<br>
 
       - <b>En linea:</b> haciendo uso del atributo style dentro de la etiqueta html a la cual queremos dar ciertos estilos css, NO es algo recomendable hacer, aunque es la <b>forma más específica</b> de aplicar estilos css.
 
@@ -98,7 +100,7 @@
 
     - <b>Selectores:</b> son las distintas formas en las que podemos aplicar estilos css a ciertos elementos html.<br>
 
-      - Selectores de Tipo: nos permiten usar las propias etiquetas del documento html como selector.
+      - **Selectores de Tipo**: nos permiten usar las propias etiquetas del documento html como selector.
 
       ```CSS
         p {
@@ -110,7 +112,7 @@
         }
       ```
 
-      - Selectores de clase: estan echos para reutilizarse, permiten seleccionar elementos específicos, se asocia al elemento html con el atributo class, y en css, se identifica por medio de un punto antes del selector(nonbre de la clase).<br>Este tipo de selector es el más recomendado para trabajar con estilos css.
+      - **Selectores de clase**: estan echos para reutilizarse, permiten seleccionar elementos específicos, se asocia al elemento html con el atributo class, y en css, se identifica por medio de un punto antes del selector(nonbre de la clase).<br>Este tipo de selector es el más recomendado para trabajar con estilos css.
 
       ```CSS
         .clase {
@@ -119,7 +121,7 @@
         }
       ```
 
-      - Selectores de id: estan echos para ser utilizadosa elementos más específicos (mayor especificidad que las clases), se asocian al elementos html con el atributo id, y en css se identica por medio del símbolo <b>#</b>.<br>Este tipo de selector solo puede ser usado una vez, por lo que no se recomienda para trabajar los estilos css, salvo se considere necesario, pues por lo general, son usados para trabajar con JavaScript.<br>
+      - **Selectores de id**: estan echos para ser utilizadosa elementos más específicos (mayor especificidad que las clases), se asocian al elementos html con el atributo id, y en css se identica por medio del símbolo <b>#</b>.<br>Este tipo de selector solo puede ser usado una vez, por lo que no se recomienda para trabajar los estilos css, salvo se considere necesario, pues por lo general, son usados para trabajar con JavaScript.<br>
 
       ```CSS
        #identificador {
@@ -128,7 +130,7 @@
        }
       ```
 
-      - Selectores descendientes: son aquellos selectores que por ejemplo, se encuentran contenidos dentro de otros elementos, es decir en base a su relación. Pueden estar conformados por tipo, clases id, o por una combinación de todos ellos. al agruparse, su nivel de especifidad aumenta en relación a otros. Si bine podemos hacer uso de ellos, no es recomendable agrupar demasiados selectores para una misma declaración.<br>
+      - **Selectores descendientes**: son aquellos selectores que por ejemplo, se encuentran contenidos dentro de otros elementos, es decir en base a su relación. Pueden estar conformados por tipo, clases id, o por una combinación de todos ellos. al agruparse, su nivel de especifidad aumenta en relación a otros. Si bine podemos hacer uso de ellos, no es recomendable agrupar demasiados selectores para una misma declaración.<br>
 
       ```CSS
         header nav{
@@ -145,7 +147,7 @@
         }
       ```
 
-      - Pseudo Clases: seleccionar en base a condiciones especiales.
+      - **Pseudo Clases**: seleccionar en base a condiciones especiales.
         ¿Cómo seleccionamos un estado, posición o relación?
 
         - Cuando ponemos el puntero del raton sobre un enlace, o cuando un elemento es el segundo de su tipo.
@@ -183,8 +185,8 @@
 
         Con esas👆👆 líneas de código seleccionamos elementos a que no tegan la clase destacado.
 
-      - Pseudo Elementos: otorgan mayor control y precisión a la hora de crear estilos css.
-        Se utilizan para definir partes específicas de un elemento.
+    - **Pseudo Elementos**: otorgan mayor control y precisión a la hora de crear estilos css.
+      Se utilizan para definir partes específicas de un elemento.
 
       las Pseudo-Clases hacen uso de dos (::) pares puntos a diferencia de los Pseudo-Elementos que solo hacen uso de un (:) solo juego de dos puntos.
 
@@ -216,7 +218,7 @@
 
       En el siguiente enlace podremos aprender más Pseudo elementos [Pseudo-Elementos](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)
 
-      - Píxeles en CSS: en css tenemos dos clases de unidades de medida, absolutas y relativas, para el caso de los píxeles, encajan dentro de las absolutas.
+    - **Píxeles en CSS**: en css tenemos dos clases de unidades de medida, absolutas y relativas, para el caso de los píxeles, encajan dentro de las absolutas.
 
       ```CSS
         p{
@@ -226,7 +228,7 @@
 
       Nos dan una precisión total,pues sin importar el dispositivo en el que se visualice, siempre mantendrá su valor.
 
-      - Porcentajes en CSS: son unidades relativas, cuando se asigna como data type a un elemento, este se calcula con base en la medida del elemento ancestro.
+    - **Porcentajes en CSS**: son unidades relativas, cuando se asigna como data type a un elemento, este se calcula con base en la medida del elemento ancestro.
 
       Para que funciones correctamente, la medida en el elemento padre debe estar especificada.
 
@@ -252,7 +254,7 @@
         }
       ```
 
-      - Em vs Rem: son unidades relativas de css para trabajar con tipografías, aunque se peuden utilizar en otros elementos.
+    - **Em vs Rem**: son unidades relativas de css para trabajar con tipografías, aunque se peuden utilizar en otros elementos.
 
       Ambas unidades computan (se convierten) en valores absolutos de pixel, basados en el valor font-size.
 
@@ -297,13 +299,13 @@
 
       Para este👆👆ejemplo, el valor sería de 32px, pues parte de la base de los 16px del elemento root, por lo que sería 16x2.
 
-      ¿Cuando usar em o rem?
+    **¿Cuando usar em o rem?**
 
-      - ante la duda es mejor usar rem, ya que no tiene efecto compuesto.
-      - usa unidades em para escalar tamaños en elementos que dependan del valor de font-size por herencia.
-      - usa rem en elementos cuyo tamaño esté en base al elemento root(HTML).
+    - ante la duda es mejor usar rem, ya que no tiene efecto compuesto.
+    - usa unidades em para escalar tamaños en elementos que dependan del valor de font-size por herencia.
+    - usa rem en elementos cuyo tamaño esté en base al elemento root(HTML).
 
-      - Color en CSS: podemos expresarlo en diferenetes formas, como por sus nombres o keyword (yellow, red, etc). Además de eso, disponemos de las funciones RGB, RGBA, HSLA y la notación hexadecimal para crear colores.
+    - **Color en CSS**: podemos expresarlo en diferenetes formas, como por sus nombres o keyword (yellow, red, etc). Además de eso, disponemos de las funciones RGB, RGBA, HSLA y la notación hexadecimal para crear colores.
 
       ```CSS
       div{
@@ -339,7 +341,7 @@
       Hue es un ángulo de 0 a 360 grados, cubre todo el espectro de color.
       Saturation y lightness representan un valor entre 0 y 100 por ciento para la desaturación/saturación y oscuro/claro respectivamente.
 
-      - Color Hexadecimal: es una de las formas más comunes de expresar colores en css, un color hexadecimal está compuesto por tres pares de símbolos hexadecimales(base 16).
+      - **Color Hexadecimal**: es una de las formas más comunes de expresar colores en css, un color hexadecimal está compuesto por tres pares de símbolos hexadecimales(base 16).
       - el siguiente👇👇 es un ejemplo de la estructura.
 
       ```CSS
@@ -353,10 +355,62 @@
       - 14 = 1x16 + 4x1 = 20 para el color rojo de un rango de 0 a 255.
       - también se peude expresar transparencia en hexadecimel, agregando otro par de símbolos.
 
-      - Especificidad:
+    - **Especificidad**: cuando dos o más reglas coisionan al momento de seleccionar un elemento, se tiene en cuenta una serie de traibutos de las reglas css en conflicto.
 
-  - Flexbox.
-  - Grid.
+      En el siguiente👇👇👇 ejemplo vemos como al colisionar las declaraciones con una misma propiedad css, se aplicará la más específica o la ue tenga mayor peso.
+
+      ```HTML
+      <h1 id="titular" class="clase"> carrera frontend</h1>
+      ```
+
+      ```CSS
+      #titular{
+        color:goldenrod;
+      }
+      h1{
+        color:red;
+      }
+      .clase{
+        color:pink;
+      }
+
+      ```
+
+      para calcular el valor de especificidad, se tiene en cuenta el número de selectores css que componen la regla, así como su prioridad. se valoran 4 tipos de selector css y su prioridad(de mayor a menor):
+
+      - selector inline (atributo style).
+      - selectores de Id.
+      - selectores de clase y pseudo-clase.
+      - slectores de tipo y pseudo-elementos.
+
+        - Calculando la especificidad:
+
+        ```
+          selector en linea: 1,0,0,0
+          selector de IF: 0,1,0,0
+          selector de clase: 0,0,1,0
+          selector de tipo: 0,0,0,1
+          !important:9,9,9,9
+        ```
+
+      Dicho de forma sencilla, **el valor del selector en linea vale 1000, el de id vale 100, el de clase vale 10 y el de tipo 1**.
+
+      Algo a tener en cuenta es el atributo **!mportant**, el cual **tiene un valor mucho mayor a cualquiera de los mencionados anteriormente**, es el que tiene mayor especificidad, sin importar donde se declare. Se debe tener cuidado con su uso, pues solo es recomendable en casos muy específicos.
+
+    - **Herencia**: Nos ayuda a evitar escribir reglas CSS duplicadas, aplicando automáticamente algunas propiedades a todos los descendientes de un elemento.
+      **No todas las propiedades css son heredables**, como por ejemplo el borde. Sin embargo, **podemos forzar** que se hereden ciertas propiedades con el valor **inherit**.
+      Ahora, **¿Cómo podríamos saltarnos la herencia?** una forma podrría ser hacer mediante el valor none.
+
+    - **Cascada**: es el algoritmo que el navegador utiliza para decidir que estilos CSS se aplican a los elementos, sobre todo cuando hay colisión entre ellos. La cascada usa los atributos de especificidad, origen, orden, importancia, etc. y asigna una prioridad, reglas que mayor priodidad tienen precendencia sobre reglas con menor prioridad. Tiene en cuenta el origen e importancia, coeficiente de especificidad y orden de aparición.
+
+      - Origen e importancia: son los estilos que escribimos, personalizaciones y el user agent(estilos por defecto del navegador).
+      - Valor de especificidad: se examina que selectores tiene mayor peso, algo que ya vimos en el concepto de especificidad. Aquellas reglas que tienen mayor valor de especificidad tienen mayor peso y prioridad que el resto.
+      - Orden de aparición: Cuando dos reglas css tienen el mismo orige y valor de especificidad, el algoritmo de la cascada usa el orden de aparición para hacer su trabajo, basicamente, la última declaración CSS escrita gana, Esto también se aplica a los estilos CSS cargados desde fuentes externas. los últimos pueden sobreescribir a los anteriores.
+
+    - **Flexbox**:
+    - **Grid**:
+
+---
 
   <br>
 
