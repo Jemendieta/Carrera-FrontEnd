@@ -1,0 +1,94 @@
+/* Estilos de la práctica de html y css - formulario */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #17213a;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  color: #dc768c;
+  text-decoration: none;
+}
+
+/* create */
+.create {
+  width: 100%;
+  max-width: 785px;
+  min-width: 350px;
+  border-radius: 15px;
+  background-color: #1b263e;
+  padding: 2rem;
+}
+
+/* login */
+.login {
+  text-align: right;
+  font-size: 16px;
+}
+/* content */
+.content {
+  width: 65%;
+  margin: 3rem auto;
+}
+.content h1 {
+  font-size: 26px;
+  text-align: center;
+}
+.content p {
+  line-height: 26px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* form */
+.form {
+  margin-top: 2rem;
+}
+.form label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.form input {
+  display: block;
+  border: none;
+  width: 100%;
+}
+.form input:not([type="submit"]) {
+  border-radius: 5px;
+  border: 1px solid #495e8d;
+  background-color: transparent;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 16px;
+}
+.form input[type="submit"] {
+  border-radius: 5px;
+  background-color: #e3627f;
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+/* legal */
+.legal {
+  border-radius: 10px;
+  background-color: #202e4e;
+  padding: 1.8rem;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 24px;
+  color: #8f9ab2;
+}
