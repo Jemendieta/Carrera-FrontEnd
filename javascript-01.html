@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a JavaScript</title>
+    <script src="js/timer.js" defer></script>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        background-color: gray;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .saludo {
+        max-width: 768px;
+        background-color: purple;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 3px black;
+        color: white;
+        text-align: center;
+      }
+      .sauldo h1 {
+        font-size: 3rem;
+        margin-top: 0;
+      }
+      .saludo h2 {
+        margin-top: 0;
+      }
+      .saludo button {
+        width: 80%;
+        border: none;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: goldenrod;
+        box-shadow: 1px 1px 1px black;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="saludo">
+      <h2 id="h2">¿Hola, Cuál es tu nombre?</h2>
+      <h1 id="h1">...</h1>
+      <button id="boton">Introduce tu nombre</button>
+    </article>
+  </body>
+</html>

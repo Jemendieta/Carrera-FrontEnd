@@ -12,6 +12,7 @@
 
 1. [HTML](#html)
 2. [CSS](#css)
+3. [JavaScript](#js)
 
 ---
 
@@ -48,7 +49,7 @@
 
 <div id="css"/>
 
-**2. CSS a Fondo.**
+**2. CSS.**
 
 - **Fundamentos.**
 
@@ -407,13 +408,19 @@
       - Valor de especificidad: se examina que selectores tiene mayor peso, algo que ya vimos en el concepto de especificidad. Aquellas reglas que tienen mayor valor de especificidad tienen mayor peso y prioridad que el resto.
       - Orden de aparición: Cuando dos reglas css tienen el mismo orige y valor de especificidad, el algoritmo de la cascada usa el orden de aparición para hacer su trabajo, basicamente, la última declaración CSS escrita gana, Esto también se aplica a los estilos CSS cargados desde fuentes externas. los últimos pueden sobreescribir a los anteriores.
 
-    - **Flexbox**:
-    - **Grid**:
-
 ---
 
-  <br>
+<div id="js"/>
 
-**3. JavaScript a Fondo.**
+**3. JavaScript.** <br>
 
-- variables
+- **Comceptos Previos**:
+  - introducido en 1995 por Brendan Erich.
+  - ECMA es la organización que regula los estándares de JavaSvript.
+  - Está en todas partes, en el lado del cliente y en el servidor(NODE).
+  - Se pude crear aplicaciones de escritorio usando Electron.
+  - Aplicaciones nativas usando Reac Native para android y ios.
+  - threejs, permite trabajar en 3d con JavaScript.
+  - JavaScript permite añadir lógia e intreacción a nuestros sitios web.
+  - viene incluido en todos los navegadores y podemos hacer uso de el mediante la consola de nuestro navegador.
+  - Primer contacto con JavaScript: [creando un timer](javascript-01.html)
