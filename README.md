@@ -415,6 +415,7 @@
 **3. JavaScript.** <br>
 
 - **Comceptos Previos**:
+
   - introducido en 1995 por Brendan Erich.
   - ECMA es la organización que regula los estándares de JavaSvript.
   - Está en todas partes, en el lado del cliente y en el servidor(NODE).
@@ -424,3 +425,117 @@
   - JavaScript permite añadir lógia e intreacción a nuestros sitios web.
   - viene incluido en todos los navegadores y podemos hacer uso de el mediante la consola de nuestro navegador.
   - Primer contacto con JavaScript: [creando un timer](javascript-01.html)
+
+- **JS con HTML**: hay diferentes formas de usar JavaScript con HTML. Todas ellas pasan por utilizar una nueva etiqueta llamada script.
+
+```HTML
+   <html lang="en">
+     <head>
+       <title>JS + HTML ✌</title>
+       <script>
+         const titulo = document.getElementById("saludo");
+         console.log(titulo);
+       </script>
+     </head>
+     <body>
+       <h1 id="saludo">Hola mundo...!!!</h1>
+     </body>
+   </html>
+```
+
+- Debido a esto, podemos ejecutar sentencias JS que serán ejecuadas por el navegador al cargar el documento html👇👇👇.
+- Sin embargo, una de las formas de asegurar que nuestras sentencias javascript sean ejecutadas correctamente es agregando el atributo **defer**, el cual nos asegura de que todos los elementos se cargen en memoria para luego ejecutar las sentencias js.
+- Debido a lo anterior, la forma más común y aceptada como mejor práctica es tener nuestro código JavaScript en archivos independientes.
+- Estos archivos deben tener la extensión **.js** (de javascript) y podemos hacer uso del artibuto **defer** para ejecutar el código JS después de haber cargado los elementos HTML.
+
+- **La consola de JS**: Si algo no funciona, la consola es el primer lugar donde debes mirar. A través de la consola Js nosindicará de algún problema, junto con información del mismo.
+- Podemos usar diferentes métodos del objetio console para estructurar y controlar mejor lo que ocurre en nuestro programa.
+- consle.log, warn (warning) y error muestran información en la consola.
+- También tenemos console.assert, con el cual podemos mostrar un mensaje si una condición no se cumple.
+
+```JAVASCRIPT
+    console.log("Hola mundo...");
+    console.warn("Mensaje de alerta");
+    console.error("error fatal");
+    // ejemplo con assert
+    const edad = prompt("Ingresa tu edad");
+    console.assert(edad>=18, "⚠ no se cumple la edad mínima");
+    // la edad debe ser mayor o igual a 18, si eso no es así, moestrará el mensaje de que no se cumple la edad.
+```
+
+- **¿Que son las variables?**: permite guardar un valor para ser usado luego. Es un espacio donde podemos guardar información para luego recuperarla.
+- Podemos crear una variable con la palabra clave var, seguido de un identificador válido.
+
+```JAVASCRIPT
+  var nombre = "jorge";
+  var edad = 35;
+  // para invocar la variables lo hacemos de la siguiente manera
+  nombre;
+  console.log(nombre);
+```
+
+- Para recuperar una variable basta con invocar su nombre, es decir, el nombre que se le ha asignado.
+- Si no existe entonces JavaScript nos arrojaría un error visible desde la consola.
+- Podemos reasignar una variable a otro valor.
+
+```JAVASCRIPT
+  var cantidad = 400;
+  var nuevaCantidad = cantidad - 200;
+```
+
+- **If Else**: son parte de las estructuras de control las cuales nos permiten tomar desiciones.
+- la más popular de estas estructuras es la de if\_
+
+```JAVASCRIPT
+  if (edad >= 18){//condición
+    // condición a comprobar. Si es verdadera true, se ejecutan esas lineas de código.
+  }else if(condición){
+    // condición a comprbar
+  }
+```
+
+- Podemos añadir otras clausulas a la estructura de control para preguntar por otras condiciones. gracias a **else if**.
+- Las clausulas son mutuamente excluyentes, es decir. si una se evalua como true, se ejecuta el blque y no se continúa evaluando el rest, aunque hubiese alguna potencialmente verdadera.
+
+```JAVASCRIPT
+  var edad = 18;
+  if (edad < 18){
+    console.log("acces denegado");
+  }else if(edad >=18){
+    console.log("acceso permitido");
+  }
+```
+
+- Con **else**, podemos añadir ua cláusula final que se ejecutará si ninguna delas anteriores ha sido evaluada como verdadera.
+
+```JAVASCRIPT
+  var edad = 20;
+  if (edad < 20){
+    console.log("acceso denegado");
+  }else if(edad > 20){
+    console.log("acceso denegadoi");
+  }else{
+    console.log("Tienes la edad apropiada");
+  }
+```
+
+- el else if, se peude reewmplazar por algo que se conoce como operador ternario.
+
+```JAVASCRIPT
+// estructura de ontrol con if else
+  var edad = 18;
+  if(edad >= 18){
+    console.log("estás autorizado a ingresar");
+  }else{
+    console.log("no estás autorizado a ingresar");
+  }
+//  ahora lo mismo con el operador ternario.
+// el símbolo de interrogación establece la delimitacion para comprobar la condición si es true y los dos puntos hacen la vez de else.
+  edad >= 18 ? console.log('estás autorizad') : console.log('n estás autorizado');
+// otra forma de hacerlo más directo por consola
+  console.log(edad >= 18 ? 'Estás autorizado' : 'No estás autorizado');
+```
+
+**Final del capítulo de introducción**
+
+- Ahora continuaremos con nuestro módulo de [JavaSript a fondo](JavaScript.md)
