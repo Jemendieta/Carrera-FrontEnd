@@ -257,5 +257,5 @@
 
 - Cada closure retornado es independiente al anterior. es decir, forman un nuevo ámbito.
 - Eso si, un closure puede modificar el estado atrapado en su interior.
-- en conclusión, un closure se crea al momento de ejecutar una función, a las variables que la función puede acceder dentro de la función o en un contexto de más arriba de la función.
 - Un closure, guarda la referencia de las variables que se tiene en el scope superior, de modo que podemos acceder a ellas dentro de ese ámbito.
+ - Un closure es una función que encapsula una serie de variables y definiciones locales que unicamente serán accesibles si son devueltas con el operador return.
