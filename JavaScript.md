@@ -202,7 +202,7 @@
    }
 ```
 
-- El método reduce solo puede ser utilizado dentro de las matrices, pues forma parte de su propotito, de su construcción.
+- El método **reduce** solo puede ser utilizado dentro de las matrices, pues forma parte de su propotito, de su construcción.
 - Ya no se recomienda hacer uso del objeto arguments
 
 **08.** **Return**: las funciones javascript retornan undefined de forma implícita.
@@ -220,4 +220,42 @@
    console.log(checkOut("Jorge", 76, 80, 150, 43, 1400));
 ```
 
-**09.** **Clousures**:
+**09.** **Closures**: "un clousure es: retornar una función desde otra función, con acceso al entorno de variables de un ámbito exterior".
+- Es una característica de JavaScript.
+- el return cobra vida en este tipo de estructuras.
+
+```JAVASCRIPT
+   function soyUnClosure(){
+    const variableLocal = "Jorge";
+    return function(){
+      return variableLocal.toUpperCase();
+    }
+   }
+   const closure = souUnClosure();
+   closure();// nos retornaría "JORGE"
+```
+
+- Entender como funcionan los closures es entender como funciona JavaScript.
+- una de los usos más comunes es la creación de las factorías: exponen parte de su ámbito para crear otras funciones.
+
+```JAVASCRIPT
+// clsure para cambiar el un pedido
+   function pedirPizza(UID){
+    let cantidadPizza = 0;
+    const pedido = `PEDIDO_${UID}`
+    return function(pizza){
+      cantidadPizza++;//incrementará con cada pedido y se mostrará al final del pedido
+      return `${pedido}_${pizza}_${cantidadPizza}`;
+    }
+   }
+   const pedidoUID = pedirPizza(100);
+   console.log(pedidoUID("barbacoa"));
+   console.log(pedidoUID("hahuayana"));
+   console.log(pedidoUID("vegetal"));
+
+```
+
+- Cada closure retornado es independiente al anterior. es decir, forman un nuevo ámbito.
+- Eso si, un closure puede modificar el estado atrapado en su interior.
+- en conclusión, un closure se crea al momento de ejecutar una función, a las variables que la función puede acceder dentro de la función o en un contexto de más arriba de la función.
+- Un closure, guarda la referencia de las variables que se tiene en el scope superior, de modo que podemos acceder a ellas dentro de ese ámbito.
