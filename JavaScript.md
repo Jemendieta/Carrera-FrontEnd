@@ -221,6 +221,7 @@
 ```
 
 **09.** **Closures**: "un clousure es: retornar una función desde otra función, con acceso al entorno de variables de un ámbito exterior".
+
 - Es una característica de JavaScript.
 - el return cobra vida en este tipo de estructuras.
 
@@ -258,4 +259,64 @@
 - Cada closure retornado es independiente al anterior. es decir, forman un nuevo ámbito.
 - Eso si, un closure puede modificar el estado atrapado en su interior.
 - Un closure, guarda la referencia de las variables que se tiene en el scope superior, de modo que podemos acceder a ellas dentro de ese ámbito.
- - Un closure es una función que encapsula una serie de variables y definiciones locales que unicamente serán accesibles si son devueltas con el operador return.
+- Un closure es una función que encapsula una serie de variables y definiciones locales que unicamente serán accesibles si son devueltas con el operador return.
+
+**10.** **IIFE - Expresiones Funcionales Inmediatamente Invocadas**: son las siglas de "Inmediately invoked function expression".
+
+- La parte mas importante es =>> inmediatamente.
+
+```JAVASCRIPT
+  (function(){
+    // haz cosas
+  })()
+```
+
+- Para crear una IIFE debemos envolver una función con el operador de agrupación.
+- De esta forma, indicamos que es una expresión que debe ser evaluada.
+- Como la expresión es evaluada como una función, podemos añadir unos paréntesis al final para auto ejecutarla inmediatemente.
+- Recordemos que una expresión funcional es una función que se encuentra dentro de una variable.
+
+```JAVASCRIPT
+  (function (name){
+    console.log("Hola mi nombre es " + name)
+  })("Jorge")
+  // esto nos devolverá, "hola mi nombre es Jorge"
+```
+
+- Este tipo de expreiones funcionales crea un ámbito quese autoinvoca.
+- La principal utilidad de un IIFEes la auto-creación de unámbito funcional nuevo e independiente.
+- Un ejemplo útil típico es su uso con bucles for.
+
+```JAVASCRIPT
+  for (let i = 0; i < 10; i++){
+    console.log(i);
+    // agregamos nuestro IIFE
+    (function(i){
+      setTimeout(function(){
+        console.log("El número es " + i);
+      }, 1000)
+    })(i)
+  }
+```
+
+- Otro ejemplo es el patrón de módulo(aunque ya no se usa mucho actualmente)
+
+```JAVASCRIPT
+const person = (function(){
+  const name = "Jorge";
+  let distance = 0;
+
+  function greet(){
+    console.log("Hola me llamo " + name);
+  }
+  function run(){
+    distance++;
+    console.log(`${name} ran ${distance} km`);
+  }
+  return {
+    greet, run
+  }
+})()
+person.greet();
+person.run();
+```
