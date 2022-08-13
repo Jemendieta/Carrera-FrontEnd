@@ -197,7 +197,7 @@
         h1::first-letter{
           color:red;
         }
-        p::first-child{
+        p::first-line{
           font-weight:bold;
         }
       ```
@@ -231,7 +231,7 @@
 
     - **Porcentajes en CSS**: son unidades relativas, cuando se asigna como data type a un elemento, este se calcula con base en la medida del elemento ancestro.
 
-      Para que funciones correctamente, la medida en el elemento padre debe estar especificada.
+      Para que funcione correctamente, la medida en el elemento padre debe estar especificada.
 
       ```CSS
         html, body{
@@ -255,11 +255,11 @@
         }
       ```
 
-    - **Em vs Rem**: son unidades relativas de css para trabajar con tipografías, aunque se peuden utilizar en otros elementos.
+    - **Em vs Rem**: son unidades relativas de css para trabajar con tipografías, aunque se pueden utilizar en otros elementos.
 
-      Ambas unidades computan (se convierten) en valores absolutos de pixel, basados en el valor font-size.
+      Ambas unidades se computan (se convierten) en valores absolutos de pixel, basados en el valor font-size.
 
-      - em: se calcula multiplicando en base al valor de font-size del elemento al que estamos accediendo. como el valor font-size es heredable, la unidad em presenta el efecto compuesto, es decir que si hubieran elementos hijos estos heredarían el valor del font-size y lo aumentarían.
+      - <b>em</b>: se calcula multiplicando en base al valor de font-size del elemento al que estamos accediendo. como el valor font-size es heredable, la unidad <b>em</b> presenta el efecto compuesto, es decir que si hubieran elementos hijos estos heredarían el valor del font-size y lo aumentarían.
 
       ```HTML
       <ul>
@@ -290,7 +290,7 @@
 
       Si agregásemos un tercer li como hijo del segundo, este partiría de la base de los 64px, los multiplicaría por los 2em de la declaracíon css, y por tanto valdría 128px.
 
-      - rem: se calcula multiplicando en bas el valor del font-size del elemento root(HTML) del codumento, por defecto es 16 px. aunque este valor puede ser influenciado por la configuración tipográfico del nacegador que se use.
+      - <b>rem</b>: se calcula multiplicando en bas el valor del font-size del elemento root(HTML) del codumento, por defecto es 16 px. aunque este valor puede ser influenciado por la configuración tipográfico del nacegador que se use.
 
       ```CSS
         li{
@@ -306,7 +306,7 @@
     - usa unidades em para escalar tamaños en elementos que dependan del valor de font-size por herencia.
     - usa rem en elementos cuyo tamaño esté en base al elemento root(HTML).
 
-    - **Color en CSS**: podemos expresarlo en diferenetes formas, como por sus nombres o keyword (yellow, red, etc). Además de eso, disponemos de las funciones RGB, RGBA, HSLA y la notación hexadecimal para crear colores.
+    - **Color en CSS**: podemos expresarlo en diferenetes formas, como por sus nombres o keyword (yellow, red, etc). Además de eso, disponemos de las funciones <b>RGB, RGBA, HSLA</b> y la notación hexadecimal para crear colores.
 
       ```CSS
       div{
@@ -322,7 +322,7 @@
       }
       ```
 
-      En este👆👆 caso, tenemos la función rgb(rojo, verde y azul) la cual acepta valores que van desde 0 hasta 255 en cada canal.
+      En este👆👆 caso, tenemos la función <b>rgb</b>(rojo, verde y azul) la cual acepta valores que van desde 0 hasta 255 en cada canal.
 
       ```CSS
       div{
@@ -330,7 +330,7 @@
       }
       ```
 
-      Para el👆👆👆 caso de rgba, funciona de forma similar a rgb, pero añade un canal extra de trasparencia(alpha), en el ejemplo, colocamos un .5 o 50% de transparencia.
+      Para el👆👆👆 caso de <b>rgba</b>, funciona de forma similar a rgb, pero añade un canal extra de trasparencia(alpha), en el ejemplo, colocamos un .5 o 50% de transparencia.
 
       ```CSS
       div{
@@ -338,11 +338,11 @@
       }
       ```
 
-      En el caso de hsla👆👆👆,matiz, saturación, iluminación y trnasparencia(hue, saturarion, lightness, alpha).
+      En el caso de <b>hsla</b>👆👆👆,matiz, saturación, iluminación y trnasparencia(hue, saturarion, lightness, alpha).
       Hue es un ángulo de 0 a 360 grados, cubre todo el espectro de color.
       Saturation y lightness representan un valor entre 0 y 100 por ciento para la desaturación/saturación y oscuro/claro respectivamente.
 
-      - **Color Hexadecimal**: es una de las formas más comunes de expresar colores en css, un color hexadecimal está compuesto por tres pares de símbolos hexadecimales(base 16).
+      - **Color Hexadecimal**: es una de las formas más comunes de expresar colores en css, un color hexadecimal <b>está compuesto por tres pares de símbolos hexadecimales(base 16).</b>
       - el siguiente👇👇 es un ejemplo de la estructura.
 
       ```CSS
@@ -351,12 +351,13 @@
         }
       ```
 
-      para saber el verdadero valor para cada color se multiplica el primer símbolo por 16 y el segundo por 1, ambos resultados se suman obteniendo l valor para ese color, por ejemplo:
+      para saber el verdadero valor para cada color se multiplica el primer símbolo por 16 y el segundo por 1, ambos resultados se suman obteniendo el valor para ese color, por ejemplo:
 
       - 14 = 1x16 + 4x1 = 20 para el color rojo de un rango de 0 a 255.
+      - c = 12x16 + 7x1 = 199 para el color azúl de un rango de 0 a 255.
       - también se peude expresar transparencia en hexadecimel, agregando otro par de símbolos.
 
-    - **Especificidad**: cuando dos o más reglas coisionan al momento de seleccionar un elemento, se tiene en cuenta una serie de traibutos de las reglas css en conflicto.
+    - **Especificidad**: cuando dos o más reglas colisionan al momento de asignar estilos a un elemento, se tiene en cuenta una serie de atributos de las reglas css en conflicto para determinar cual de ellas se tomará en cuenta en primer lugar.
 
       En el siguiente👇👇👇 ejemplo vemos como al colisionar las declaraciones con una misma propiedad css, se aplicará la más específica o la ue tenga mayor peso.
 
@@ -402,11 +403,11 @@
       **No todas las propiedades css son heredables**, como por ejemplo el borde. Sin embargo, **podemos forzar** que se hereden ciertas propiedades con el valor **inherit**.
       Ahora, **¿Cómo podríamos saltarnos la herencia?** una forma podrría ser hacer mediante el valor none.
 
-    - **Cascada**: es el algoritmo que el navegador utiliza para decidir que estilos CSS se aplican a los elementos, sobre todo cuando hay colisión entre ellos. La cascada usa los atributos de especificidad, origen, orden, importancia, etc. y asigna una prioridad, reglas que mayor priodidad tienen precendencia sobre reglas con menor prioridad. Tiene en cuenta el origen e importancia, coeficiente de especificidad y orden de aparición.
+    - **Cascada**: es el algoritmo que el navegador utiliza para decidir que estilos CSS se aplican a los elementos, sobre todo cuando hay colisión entre ellos. La cascada usa los atributos de especificidad, origen, orden, importancia, etc. y asigna una prioridad, reglas que mayor priodidad tienen precendencia sobre reglas con menor prioridad. Tiene en cuenta el origen e importancia, coeficiente de especificidad y orden de aparición:
 
-      - Origen e importancia: son los estilos que escribimos, personalizaciones y el user agent(estilos por defecto del navegador).
-      - Valor de especificidad: se examina que selectores tiene mayor peso, algo que ya vimos en el concepto de especificidad. Aquellas reglas que tienen mayor valor de especificidad tienen mayor peso y prioridad que el resto.
-      - Orden de aparición: Cuando dos reglas css tienen el mismo orige y valor de especificidad, el algoritmo de la cascada usa el orden de aparición para hacer su trabajo, basicamente, la última declaración CSS escrita gana, Esto también se aplica a los estilos CSS cargados desde fuentes externas. los últimos pueden sobreescribir a los anteriores.
+      - <b>Origen e importancia</b>: son los estilos que escribimos, personalizaciones y el user agent(estilos por defecto del navegador).
+      - <b>Valor de especificidad</b>: se examina que selectores tiene mayor peso, algo que ya vimos en el concepto de especificidad. Aquellas reglas que tienen mayor valor de especificidad tienen mayor peso y prioridad que el resto.
+      - <b>Orden de aparición</b>: Cuando dos reglas css tienen el mismo orige y valor de especificidad, el algoritmo de la cascada usa el orden de aparición para hacer su trabajo, basicamente, la última declaración CSS escrita gana, Esto también se aplica a los estilos CSS cargados desde fuentes externas. los últimos pueden sobreescribir a los anteriores.
 
 ---
 
@@ -422,7 +423,7 @@
   - Se pude crear aplicaciones de escritorio usando Electron.
   - Aplicaciones nativas usando Reac Native para android y ios.
   - threejs, permite trabajar en 3d con JavaScript.
-  - JavaScript permite añadir lógia e intreacción a nuestros sitios web.
+  - JavaScript permite añadir lógica e intreacción a nuestros sitios web.
   - viene incluido en todos los navegadores y podemos hacer uso de el mediante la consola de nuestro navegador.
   - Primer contacto con JavaScript: [creando un timer](javascript-01.html)
 
@@ -464,7 +465,7 @@
 ```
 
 - **¿Que son las variables?**: permite guardar un valor para ser usado luego. Es un espacio donde podemos guardar información para luego recuperarla.
-- Podemos crear una variable con la palabra clave var, seguido de un identificador válido.
+- Podemos crear una variable con la palabra clave <b>var</b>, seguido de un identificador válido.
 
 ```JAVASCRIPT
   var nombre = "jorge";
@@ -474,9 +475,12 @@
   console.log(nombre);
 ```
 
-- Para recuperar una variable basta con invocar su nombre, es decir, el nombre que se le ha asignado.
+- Para recuperar una variable basta con <b>invocar</b> su nombre, es decir, el nombre que se le ha asignado.
 - Si no existe entonces JavaScript nos arrojaría un error visible desde la consola.
+- En resumen, cuando invocas una variable, JavaScript comprueba si esta existe.
+- Si es así, <b>interpola</b>(tomar lo que hay dentro de la variable y colocarlo donde ha sido invocada) su valor en ese mismo lugar donde ocurre la invocación.
 - Podemos reasignar una variable a otro valor.
+- 👇🏻👇🏻👇🏻
 
 ```JAVASCRIPT
   var cantidad = 400;
@@ -484,18 +488,18 @@
 ```
 
 - **If Else**: son parte de las estructuras de control las cuales nos permiten tomar desiciones.
-- la más popular de estas estructuras es la de if\_
+- la más popular de estas estructuras de control es <b>if</b>.
 
 ```JAVASCRIPT
   if (edad >= 18){//condición
-    // condición a comprobar. Si es verdadera true, se ejecutan esas lineas de código.
+    // condición a comprobar. Si es verdadera (true), se ejecutan esas lineas de código.
   }else if(condición){
     // condición a comprbar
   }
 ```
 
 - Podemos añadir otras clausulas a la estructura de control para preguntar por otras condiciones. gracias a **else if**.
-- Las clausulas son mutuamente excluyentes, es decir. si una se evalua como true, se ejecuta el blque y no se continúa evaluando el rest, aunque hubiese alguna potencialmente verdadera.
+- Las clausulas son mutuamente excluyentes, es decir. si una se evalua como true, se ejecuta el bloque y no se continúa evaluando el resto aunque hubiese alguna potencialmente verdadera.
 
 ```JAVASCRIPT
   var edad = 18;
@@ -506,20 +510,23 @@
   }
 ```
 
-- Con **else**, podemos añadir ua cláusula final que se ejecutará si ninguna delas anteriores ha sido evaluada como verdadera.
+- Con **else**, podemos añadir ua cláusula final que se ejecutará si ninguna de las anteriores ha sido evaluada como verdadera.
 
 ```JAVASCRIPT
   var edad = 20;
   if (edad < 20){
+    // si es verdadera, se ejecuta y se acaba el programa
     console.log("acceso denegado");
   }else if(edad > 20){
+    // se ejecutará si la primera condición no es verdadera
     console.log("acceso denegadoi");
   }else{
+    // se ejecutará siempre y cuando las condiciones anteriores no se cumplan
     console.log("Tienes la edad apropiada");
   }
 ```
 
-- el else if, se peude reewmplazar por algo que se conoce como operador ternario.
+- el else if, se puede reemplazar por algo que se conoce como operador ternario.
 
 ```JAVASCRIPT
 // estructura de ontrol con if else
@@ -530,11 +537,13 @@
     console.log("no estás autorizado a ingresar");
   }
 //  ahora lo mismo con el operador ternario.
-// el símbolo de interrogación establece la delimitacion para comprobar la condición si es true y los dos puntos hacen la vez de else.
-  edad >= 18 ? console.log('estás autorizad') : console.log('n estás autorizado');
+  edad >= 18 ? console.log('estás autorizado') : console.log('no estás autorizado');
+// el símbolo de interrogación establece la delimitacion para comprobar la condición como true y los dos puntos hacen la vez de else.
 // otra forma de hacerlo más directo por consola
   console.log(edad >= 18 ? 'Estás autorizado' : 'No estás autorizado');
 ```
+
+- Algo a considerar es que el operador ternario solo sirve para evaluar un if y un else, si se tiene varias condiciones se debe hacer uso del if canónico.
 
 **Final del capítulo de introducción**
 
