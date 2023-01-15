@@ -23,17 +23,17 @@
 - **HTML.**
   Lista de etiquetas que veremos en esta sección.
 
-  - Encabezados(h1, h2,...h6).
-  - Párrafos(p).
-  - Saltos de línea(br).
-  - Listas ordenadas(ol) y desordenadas(ul).
-  - Enlaces(a) y su atributo href.
-  - Rutas absolutas y relativas
+  - **Encabezados**(h1, h2,...h6).
+  - **Párrafos**(p).
+  - **Saltos de línea**(br).
+  - **Listas ordenadas(ol) y desordenadas(ul)**.
+  - **Enlaces(a) y su atributo href**.
+  - **Rutas absolutas y relativas**.
     - <b>Absolutas:</b> son aquellas que se identifican por su URL, por ejemplo, https://www.google.com
     - <b>Relativas:</b> son aquellas que se establecen de forma relativa a donde nos encontramos(el origen), por ejemplo dentro del mismo servidor o equipo local. "Carpeta1/carpeta2/archivo1". Algo a tener en cuenta es que para subor de directorio se usa <b>../</b>
-  - Imágenes(img): hace uso del atributo <b>src</b> para indicar la ruta de la imagen. Es recomendable usar el atributo <b>alt</b> por cada imagen que greguemos.
+  - **Imágenes(img)**: hace uso del atributo <b>src</b> para indicar la ruta de la imagen. Es recomendable usar el atributo <b>alt</b> por cada imagen que greguemos.
     Es bueno considerar también la etiqueta <b>figure</b> y <b>figcaption</b>
-  - Estructura semántica: son el conjuntmde etiquets que describen, le dan sentido y significado al conetenido de los elementos de nuestro sitio.
+  - **Estructura semántica**: son el conjuntmde etiquets que describen, le dan sentido y significado al conetenido de los elementos de nuestro sitio.
     - <b>header:</b> por lo general va al incio de la web, y se usa para definir la el contenido de cabecera.
     - <b>section:</b> agrupa contenido relacionado por su temática y relación entre si.
     - <b>article:</b> agrupa contenido relacionado enre si, pero además es aútónomo del resto del contenido del sitio; contenido que puede consumirse de forma independiente.
@@ -389,7 +389,7 @@
 
         ```
           selector en linea: 1,0,0,0
-          selector de IF: 0,1,0,0
+          selector de Id: 0,1,0,0
           selector de clase: 0,0,1,0
           selector de tipo: 0,0,0,1
           !important:9,9,9,9

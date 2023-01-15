@@ -8,7 +8,7 @@ const h2 = document.getElementById("h2");
 
 // Preguntar y obtener el nombre de usuario
 function preguntaNombre() {
-  const nombre = prompt("introduce tu nonbre");
+  const nombre = prompt("introduce tu nombre");
   mostrarNombre(nombre);
 }
 

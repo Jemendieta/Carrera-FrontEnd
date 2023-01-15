@@ -320,3 +320,14 @@ const person = (function(){
 person.greet();
 person.run();
 ```
+
+**11.** **Callbacks en JavaScript**: Es una función que se pasa a otra función como argumento para ejecutarla luego.
+
+```JAVASCRIPT
+  function miFunción(fn){
+    // callback
+    fn()
+  }
+```
+
+- Existen callbacks síncronos y asíncronos.
