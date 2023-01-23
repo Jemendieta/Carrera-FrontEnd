@@ -359,7 +359,7 @@
 
     - **Especificidad**: cuando dos o más reglas colisionan al momento de asignar estilos a un elemento, se tiene en cuenta una serie de atributos de las reglas css en conflicto para determinar cual de ellas se tomará en cuenta en primer lugar.
 
-      En el siguiente👇👇👇 ejemplo vemos como al colisionar las declaraciones con una misma propiedad css, se aplicará la más específica o la ue tenga mayor peso.
+      En el siguiente👇👇👇 ejemplo vemos como al colisionar las declaraciones con una misma propiedad css, se aplicará la más específica o la que tenga mayor peso.
 
       ```HTML
       <h1 id="titular" class="clase"> carrera frontend</h1>
@@ -395,19 +395,19 @@
           !important:9,9,9,9
         ```
 
-      Dicho de forma sencilla, **el valor del selector en linea vale 1000, el de id vale 100, el de clase vale 10 y el de tipo 1**.
+      Dicho de otramanera, **el valor del selector en linea vale 1000, el de id vale 100, el de clase vale 10 y el de tipo 1**.
 
-      Algo a tener en cuenta es el atributo **!mportant**, el cual **tiene un valor mucho mayor a cualquiera de los mencionados anteriormente**, es el que tiene mayor especificidad, sin importar donde se declare. Se debe tener cuidado con su uso, pues solo es recomendable en casos muy específicos.
+      Algo a tener en cuenta es el atributo **!mportant**, el cual **tiene un valor mucho mayor que cualquiera de los mencionados anteriormente**, es el que tiene mayor especificidad, sin importar donde se declare. Se debe tener cuidado con su uso, pues solo es recomendable en casos muy específicos.
 
-    - **Herencia**: Nos ayuda a evitar escribir reglas CSS duplicadas, aplicando automáticamente algunas propiedades a todos los descendientes de un elemento.
-      **No todas las propiedades css son heredables**, como por ejemplo el borde. Sin embargo, **podemos forzar** que se hereden ciertas propiedades con el valor **inherit**.
-      Ahora, **¿Cómo podríamos saltarnos la herencia?** una forma podrría ser hacer mediante el valor none.
-
-    - **Cascada**: es el algoritmo que el navegador utiliza para decidir que estilos CSS se aplican a los elementos, sobre todo cuando hay colisión entre ellos. La cascada usa los atributos de especificidad, origen, orden, importancia, etc. y asigna una prioridad, reglas que mayor priodidad tienen precendencia sobre reglas con menor prioridad. Tiene en cuenta el origen e importancia, coeficiente de especificidad y orden de aparición:
+    - **Cascada**: es el algoritmo que el navegador utiliza para decidir que estilos CSS se aplican, sobre todo cuando hay colisión entre ellos. La cascada usa los atributos de especificidad, origen, orden, importancia, etc. y asigna una prioridad. Tiene en cuenta el origen e importancia, coeficiente de especificidad y orden de aparición:
 
       - <b>Origen e importancia</b>: son los estilos que escribimos, personalizaciones y el user agent(estilos por defecto del navegador).
       - <b>Valor de especificidad</b>: se examina que selectores tiene mayor peso, algo que ya vimos en el concepto de especificidad. Aquellas reglas que tienen mayor valor de especificidad tienen mayor peso y prioridad que el resto.
       - <b>Orden de aparición</b>: Cuando dos reglas css tienen el mismo orige y valor de especificidad, el algoritmo de la cascada usa el orden de aparición para hacer su trabajo, basicamente, la última declaración CSS escrita gana, Esto también se aplica a los estilos CSS cargados desde fuentes externas. los últimos pueden sobreescribir a los anteriores.
+
+    - **Herencia**: Nos ayuda a evitar escribir reglas CSS duplicadas, aplicando automáticamente algunas propiedades a todos los descendientes de un elemento.
+      **No todas las propiedades css son heredables**, como por ejemplo el borde. Sin embargo, **podemos forzar** que se hereden ciertas propiedades con el valor **inherit**.
+      Ahora, **¿Cómo podríamos saltarnos la herencia?** una forma podría ser hacer mediante el valor none.
 
 ---
 
