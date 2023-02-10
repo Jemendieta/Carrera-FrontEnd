@@ -419,13 +419,13 @@
 
   - introducido en 1995 por Brendan Erich.
   - ECMA es la organización que regula los estándares de JavaSvript.
-  - Está en todas partes, en el lado del cliente y en el servidor(NODE).
-  - Se pude crear aplicaciones de escritorio usando Electron.
-  - Aplicaciones nativas usando Reac Native para android y ios.
-  - threejs, permite trabajar en 3d con JavaScript.
-  - JavaScript permite añadir lógica e intreacción a nuestros sitios web.
-  - viene incluido en todos los navegadores y podemos hacer uso de el mediante la consola de nuestro navegador.
-  - Primer contacto con JavaScript: [creando un timer](javascript-01.html)
+  - Está en todas partes, en el lado del cliente y en el servidor(NODE):
+    - Se puede crear aplicaciones de escritorio usando Electron.
+    - Aplicaciones nativas usando Reac Native para android y ios.
+    - threejs, permite trabajar en 3d con JavaScript.
+    - JavaScript permite añadir lógica e intreacción a nuestros sitios web.
+    - viene incluido en todos los navegadores y podemos hacer uso de el mediante la consola de nuestro navegador.
+  - Primer contacto con JavaScript: [creando un timer](js/timer.js)
 
 - **JS con HTML**: hay diferentes formas de usar JavaScript con HTML. Todas ellas pasan por utilizar una nueva etiqueta llamada script.
 
