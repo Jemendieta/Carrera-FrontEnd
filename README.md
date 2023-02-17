@@ -449,7 +449,7 @@
 - Debido a lo anterior, la forma más común y aceptada como mejor práctica es tener nuestro código JavaScript en archivos independientes.
 - Estos archivos deben tener la extensión **.js** (de javascript) y podemos hacer uso del artibuto **defer** para ejecutar el código JS después de haber cargado los elementos HTML.
 
-- **La consola de JS**: Si algo no funciona, la consola es el primer lugar donde debes mirar. A través de la consola Js nosindicará de algún problema, junto con información del mismo.
+- **La consola de JS**: Si algo no funciona, la consola es el primer lugar donde debes mirar. A través de la consola Js nos indicará de algún problema, junto con información del mismo.
 - Podemos usar diferentes métodos del objetio console para estructurar y controlar mejor lo que ocurre en nuestro programa.
 - consle.log, warn (warning) y error muestran información en la consola.
 - También tenemos console.assert, con el cual podemos mostrar un mensaje si una condición no se cumple.
@@ -494,7 +494,7 @@
   if (edad >= 18){//condición
     // condición a comprobar. Si es verdadera (true), se ejecutan esas lineas de código.
   }else if(condición){
-    // condición a comprbar
+    // condición a comprobar
   }
 ```
 
@@ -519,14 +519,14 @@
     console.log("acceso denegado");
   }else if(edad > 20){
     // se ejecutará si la primera condición no es verdadera
-    console.log("acceso denegadoi");
+    console.log("acceso denegado");
   }else{
     // se ejecutará siempre y cuando las condiciones anteriores no se cumplan
     console.log("Tienes la edad apropiada");
   }
 ```
 
-- el else if, se puede reemplazar por algo que se conoce como operador ternario.
+- el else if, se puede reemplazar por algo que se conoce como <b>operador ternario</b>.
 
 ```JAVASCRIPT
 // estructura de ontrol con if else
