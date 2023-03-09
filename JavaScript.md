@@ -35,7 +35,7 @@
 ```
 
 - Muchas veces podremos encontrar la etiqueta `<script>` en el `<footer>` en lugar del `<head>`de nuestro documento, para asegurarnos de que el **DOM** está listo antes de acceder a él.
-- Hoy en día podemos haer uso del atributo **defer**, que difiere la carga de nuestro Js hastq eu el DOM esté listo.
+- Hoy en día podemos hacer uso del atributo **defer**, que difiere la carga de nuestro Js hasta que el DOM esté listo.
 
 ```HTML
   <script defer src="main.js"></script>
@@ -48,7 +48,7 @@
   <noscript>Javascript desactivado</noscript>
 ```
 
-**02.** **Hoisting**: JavaScript es una lenguaje con tipos dinámicos, es decir, podemos asignar y reasignar difrerntes tipos a una misma variable, para hacerlo tnemos que utilizar dos fases diferentes: declaración e inicialización.
+**02.** **Hoisting**: JavaScript es un lenguaje con tipos dinámicos, es decir, podemos asignar y reasignar diferentes tipos a una misma variable, para hacerlo, tenemos que utilizar dos fases diferentes: declaración e inicialización.
 
 ```JAVASCRIPT
    var numero //Declaración
@@ -56,7 +56,7 @@
    numero = "dies" // Reasignación
 ```
 
-- Cuando declaramos una variable Js le asigna el tipo undefined, si intentamos referenciar la variable antes de ser declarada, lo que ocurrirá es que ya estará disponible, pues al interpretar el código, JavaScript alza al inicio del programa la declaración de las variables(no la inicialización) y las funciones declaradas.
+- Cuando declaramos una variable, Js le asigna el tipo undefined, si intentamos referenciar la variable antes de ser declarada, lo que ocurrirá es que ya estará disponible, pues al interpretar el código, JavaScript alza al inicio del programa la declaración de las variables(no la inicialización) y las funciones declaradas.
 
 ```JAVASCRIPT
    console.log(nombre) //invocación
@@ -97,8 +97,8 @@
    }
 ```
 
-- Al utilizar const nos aseghuramos que no ocurrirá ninguna re-asociación a otro valor en esa variable.
-- Usar constantes no significa que sean inmuntables. podemos mutar propiedades del valor asociado a la constante, esto se puede hacer poe ejmplo con los bjetos.
+- Al utilizar const nos aseguramos que no ocurrirá ninguna re-asociación a otro valor en esa variable.
+- Usar constantes no significa que sean inmuntables. podemos mutar propiedades del valor asociado a la constante, esto se puede hacer por ejemplo con los objetos.
 
 ```JAVASCRIPT
    {
@@ -108,7 +108,7 @@
     console.log(persona.nombre);
 ```
 
-- Al igual que con let, disponemos de ámbito de bloque, es decir que soplo podremos acceder a la constante en el bloque en el que fueron declaradas.
+- Al igual que con let, disponemos de ámbito de bloque, es decir que solo podremos acceder a la constante en el bloque en el que fueron declaradas.
 - Las variables creadas con const no son alzadas.
 
 **05.** **Funciones**: En JS tenemos tres formas de declarar funciones.
