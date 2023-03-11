@@ -111,9 +111,9 @@
 - Al igual que con let, disponemos de ámbito de bloque, es decir que solo podremos acceder a la constante en el bloque en el que fueron declaradas.
 - Las variables creadas con const no son alzadas.
 
-**05.** **Funciones**: En JS tenemos tres formas de declarar funciones.
+**05.** **Funciones**: Son un conjunto de instrucciones que llevan a cabo una tarea. en JS tenemos tres formas de declarar funciones.
 
-- La primera de ellas es a través de las funciones declaradas, estas requieren un identificador y son alzables.
+- La primera de ellas es a través de las <b>funciones declaradas</b>, estas requieren un identificador (nombre) y son alzables.
 
 ```JAVASCRIPT
    function saludar(){
@@ -122,19 +122,19 @@
    saludar();//muestra el mensaje "Hola, me llamo Jorge" invocando a la función por su nombre
 ```
 
-- También podemos declarar una expresión funcional, que consite en asociar una función a una variable. Esta puede tener nombre o ser anónima, y lo que se alza es la declaración no la asignación.
+- También podemos declarar una <b>expresión funcional</b>, que consiste en asociar una función a una variable. Esta puede tener nombre o ser anónima, y lo que se alza es la declaración no la asignación.
 
 ```JAVASCRIPT
    const saludar = function (){ //función anónima
      console.log("Hola, me llamo Jorge");
    }
-   saludar();//muestra el mensaje "Hola, me llamo Jorge" invocando a la función por el nombre de la variable assicada a ella.
+   saludar();
 ```
 
-- Finalmente, podemos crear una versión aún más acortada de una funación anónima a través de las funciones de flecha (arrow functions).
+- Finalmente, podemos crear una versión aún más acortada de una función anónima a través de las <b>funciones de flecha (arrow functions)</b>.
 - **No** disponen de contexto propio de **this**.
-- Disponen de retorno implícito, delimitadores opcinales y no se alzan.
-- Si se colocan las llaves en una función arrow, ya no tendremos return implítico, por lo cual, deberemos llamar a return.
+- Disponen de retorno implícito, delimitadores opcionales y no se alzan.
+- Si se colocan las llaves en una función arrow, ya no tendremos return implítico, por lo cual deberemos llamar a return.
 
 ```JAVASCRIPT
    const saludar = ()=>{ //función anónima
